@@ -40,7 +40,7 @@ class Processor implements ProcessorInterface
      */
     public function __construct()
     {
-        $this->getConfig = Config::default(new PromptDefaultConfiguration)::get('Services', 'processor');
+        $this->getConfig = Config::default('ZN\Prompt\PromptDefaultConfiguration')::get('Services', 'processor');
         $this->path      = $this->getConfig['path'];
         $this->driver    = $this->getConfig['driver'];
     }
