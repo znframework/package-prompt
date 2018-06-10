@@ -18,12 +18,13 @@ class PromptDefaultConfiguration
 {
     /*
     |--------------------------------------------------------------------------
-    | Crontab
+    | Prompt
     |--------------------------------------------------------------------------
     |
     | The current PHP path. Especially necessary for crontab.
     |
     */
 
-    public $path = '/usr/bin/php';
+    public $path   = '/usr/bin/php';
+    public $driver = 'exec';
 }
