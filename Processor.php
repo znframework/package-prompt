@@ -30,6 +30,11 @@ class Processor implements ProcessorInterface
     protected $driver;
 
     /**
+     * @var array
+     */
+    protected $getConfig;
+
+    /**
      * Magic Constructor
      */
     public function __construct()
@@ -50,7 +55,7 @@ class Processor implements ProcessorInterface
             case 'cli' : 
             case 'cgi' : return $name;
 
-            default    : return $sapi;
+            default    : return $sapi; // @codeCoverageIgnore
         }
     }
 
